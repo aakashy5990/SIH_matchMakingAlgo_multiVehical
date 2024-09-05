@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9e0511cfacfe3de460a0d15611162b4a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_9e0511cfacfe3de460a0d15611162b4a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9e0511cfacfe3de460a0d15611162b4a = L.map(
+                "map_9e0511cfacfe3de460a0d15611162b4a",
+                {
+                    center: [28.645441, 77.218232],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 14,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5a32af1f536306de41058282ad65e958 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_5a32af1f536306de41058282ad65e958.addTo(map_9e0511cfacfe3de460a0d15611162b4a);
+        
+    
+            var marker_8f250cf26f7689db5c7bc58011f87134 = L.marker(
+                [28.645441, 77.218232],
+                {}
+            ).addTo(map_9e0511cfacfe3de460a0d15611162b4a);
+        
+    
+            var icon_08ad4cfab92d1edb3de0685d31e2eb3b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_8f250cf26f7689db5c7bc58011f87134.setIcon(icon_08ad4cfab92d1edb3de0685d31e2eb3b);
+        
+    
+        var popup_3547c1a0f45b5087c2367e27938ce14b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c23bf77e58e940c3811ed224d83c8585 = $(`<div id="html_c23bf77e58e940c3811ed224d83c8585" style="width: 100.0%; height: 100.0%;">GPS Point: 28.645441, 77.218232 City: , Delhi, India</div>`)[0];
+                popup_3547c1a0f45b5087c2367e27938ce14b.setContent(html_c23bf77e58e940c3811ed224d83c8585);
+            
+        
+
+        marker_8f250cf26f7689db5c7bc58011f87134.bindPopup(popup_3547c1a0f45b5087c2367e27938ce14b)
+        ;
+
+        
+    
+    
+            var poly_line_1b59323856346787147df8d74fa14cb9 = L.polyline(
+                [[28.645, 77.218], [28.646, 77.219]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_9e0511cfacfe3de460a0d15611162b4a);
+        
+    
+            var marker_3e9b960be13589e95b94b47170c74709 = L.marker(
+                [28.646025, 77.218502],
+                {}
+            ).addTo(map_9e0511cfacfe3de460a0d15611162b4a);
+        
+    
+            var icon_abb23e30e51efcd22adaab6bb46c7dab = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3e9b960be13589e95b94b47170c74709.setIcon(icon_abb23e30e51efcd22adaab6bb46c7dab);
+        
+    
+        var popup_8d535376da7681da2642becff8f27c13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66b7e5736155f21712b1ac2c5dfc5e3a = $(`<div id="html_66b7e5736155f21712b1ac2c5dfc5e3a" style="width: 100.0%; height: 100.0%;">GPS Point: 28.646025, 77.218502 City: , Delhi, India</div>`)[0];
+                popup_8d535376da7681da2642becff8f27c13.setContent(html_66b7e5736155f21712b1ac2c5dfc5e3a);
+            
+        
+
+        marker_3e9b960be13589e95b94b47170c74709.bindPopup(popup_8d535376da7681da2642becff8f27c13)
+        ;
+
+        
+    
+    
+            var poly_line_7921470444fdad0e73a926388c87d347 = L.polyline(
+                [[28.645, 77.218], [28.646, 77.219]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1, "smoothFactor": 1.0, "stroke": true, "weight": 2.5}
+            ).addTo(map_9e0511cfacfe3de460a0d15611162b4a);
+        
+</script>
+</html>

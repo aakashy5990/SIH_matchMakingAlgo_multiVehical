@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Files</title>
+</head>
+<body>
+    <h1>Upload GPS and Road Segment Files</h1>
+    <form action="{% url 'upload_view' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="gps_file">GPS Data File:</label>
+        <input type="file" id="gps_file" name="gps_file" accept=".csv" required><br><br>
+
+        <label for="road_file">Road Segments File:</label>
+        <input type="file" id="road_file" name="road_file" accept=".csv" required><br><br>
+
+        <input type="submit" value="Upload and Process">
+    </form>
+    <a href="{% url 'home' %}">Go back to home</a>
+</body>
+</html>

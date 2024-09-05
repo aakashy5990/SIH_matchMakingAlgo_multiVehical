@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Matched Segments and Maps</title>
+</head>
+<body>
+    <h1>Matched Segments</h1>
+    <table border="1">
+        <tr>
+            <th>Vehicle ID</th>
+            <th>GPS Latitude</th>
+            <th>GPS Longitude</th>
+            <th>Start Latitude</th>
+            <th>Start Longitude</th>
+            <th>End Latitude</th>
+            <th>End Longitude</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Country</th>
+        </tr>
+        {% for segment in matched_segments %}
+        <tr>
+            <td>{{ segment.vehicle_id }}</td>
+            <td>{{ segment.gps_lat }}</td>
+            <td>{{ segment.gps_lon }}</td>
+            <td>{{ segment.start_lat }}</td>
+            <td>{{ segment.start_lon }}</td>
+            <td>{{ segment.end_lat }}</td>
+            <td>{{ segment.end_lon }}</td>
+            <td>{{ segment.city }}</td>
+            <td>{{ segment.state }}</td>
+            <td>{{ segment.country }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>Maps for Each Vehicle</h2>
+    {% for map in maps %}
+        <h2>Vehicle ID: {{ map.vehicle_id }}</h2>
+        <iframe src="{{ map.map_path }}" width="600" height="400"></iframe>
+    {% endfor %}
+    
+    <a href="{% url 'home' %}">Go back to home</a>
+</body>
+</html>

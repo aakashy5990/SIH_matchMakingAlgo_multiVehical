@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Map Display</title>
+</head>
+<body>
+    {% load static %}
+    <h1>Map Display</h1>
+    <iframe src="{% static map.map_path %}" width="600" height="400"></iframe>
+    <a href="{% url 'home' %}">Go back to home</a>
+</body>
+</html>
